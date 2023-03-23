@@ -1,20 +1,23 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^18.15.5
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
-  '@typescript-eslint/eslint-plugin': ^5.43.0
+  '@typescript-eslint/eslint-plugin': ^5.56.0
   '@vitejs/plugin-react': ^3.1.0
   eslint: ^8.36.0
   eslint-config-standard-with-typescript: ^34.0.1
-  eslint-plugin-import: ^2.25.2
-  eslint-plugin-n: ^15.0.0
-  eslint-plugin-promise: ^6.0.0
+  eslint-plugin-import: ^2.27.5
+  eslint-plugin-n: ^15.6.1
+  eslint-plugin-promise: ^6.1.1
   eslint-plugin-react: ^7.32.2
+  i18next: ^22.4.13
   localforage: ^1.10.0
   match-sorter: ^6.3.1
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-i18next: ^12.2.0
   react-router-dom: ^6.9.0
   sass: ^1.59.3
   sort-by: ^1.2.0
@@ -26,10 +29,12 @@ specifiers:
   zustand: ^4.3.6
 
 dependencies:
+  i18next: 22.4.13
   localforage: 1.10.0
   match-sorter: 6.3.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-i18next: 12.2.0_2rh65uwnd6kial3dj4kteywnti
   react-router-dom: 6.9.0_biqbaboplfbrettd7655fr4n2y
   sass: 1.59.3
   sort-by: 1.2.0
@@ -38,6 +43,7 @@ dependencies:
   zustand: 4.3.6_react@18.2.0
 
 devDependencies:
+  '@types/node': 18.15.5
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@typescript-eslint/eslint-plugin': 5.56.0_vgl77cfdswitgr47lm5swmv43m
@@ -50,7 +56,7 @@ devDependencies:
   eslint-plugin-react: 7.32.2_eslint@8.36.0
   standard: 17.0.0
   typescript: 4.9.5
-  vite: 4.2.1_sass@1.59.3
+  vite: 4.2.1_y7rghahg7ddu72pko63vhsxa44
 
 packages:
 
@@ -641,6 +647,9 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
+  /@types/node/18.15.5:
+    resolution: {integrity: sha512-Ark2WDjjZO7GmvsyFFf81MXuGTA/d6oP38anyxWOL6EREyBKAxKoFHwBhaZxCfLRLpO8JgVXwqOwSwa7jRcjew==}
+
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
@@ -807,7 +816,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6_@babel+core@7.21.3
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.2.1_sass@1.59.3
+      vite: 4.2.1_y7rghahg7ddu72pko63vhsxa44
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1826,6 +1835,18 @@ packages:
       react-is: 16.13.1
     dev: false
 
+  /html-parse-stringify/3.0.1:
+    resolution: {integrity: sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==}
+    dependencies:
+      void-elements: 3.1.0
+    dev: false
+
+  /i18next/22.4.13:
+    resolution: {integrity: sha512-GX7flMHRRqQA0I1yGLmaZ4Hwt1JfLqagk8QPDPZsqekbKtXsuIngSVWM/s3SLgNkrEXjA+0sMGNuOEkkmyqmWg==}
+    dependencies:
+      '@babel/runtime': 7.21.0
+    dev: false
+
   /ignore/5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
@@ -2412,6 +2433,26 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-i18next/12.2.0_2rh65uwnd6kial3dj4kteywnti:
+    resolution: {integrity: sha512-5XeVgSygaGfyFmDd2WcXvINRw2WEC1XviW1LXY/xLOEMzsCFRwKqfnHN+hUjla8ZipbVJR27GCMSuTr0BhBBBQ==}
+    peerDependencies:
+      i18next: '>= 19.0.0'
+      react: '>= 16.8.0'
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.21.0
+      html-parse-stringify: 3.0.1
+      i18next: 22.4.13
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -2839,7 +2880,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /vite/4.2.1_sass@1.59.3:
+  /vite/4.2.1_y7rghahg7ddu72pko63vhsxa44:
     resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2864,6 +2905,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.15.5
       esbuild: 0.17.12
       postcss: 8.4.21
       resolve: 1.22.1
@@ -2872,6 +2914,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /void-elements/3.1.0:
+    resolution: {integrity: sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
