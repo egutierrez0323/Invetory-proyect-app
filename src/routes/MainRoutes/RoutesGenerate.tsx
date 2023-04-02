@@ -1,9 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
 import { RouteType } from '../model/route.model'
+import React from 'react'
 
-export const RoutesGenerate = (props : RouteType[]) => {
-  const routes : RouteType[] = props
-  console.log(routes)
+interface Props {
+  routes: RouteType[]
+}
+
+export const RoutesGenerate : React.FC<Props> = (props) => {
+  const { routes } = props
   return (
     <Routes>
       {routes.map((route) => {
