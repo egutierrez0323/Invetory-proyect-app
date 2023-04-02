@@ -10,7 +10,7 @@ export const RoutesGenerate : React.FC<Props> = (props) => {
   const { routes } = props
   return (
     <Routes>
-      {routes.map((route) => {
+      {routes.map((route: RouteType) => {
         return <Route key={route.path} path={route.path} element={route.element} />
       })}
     </Routes>

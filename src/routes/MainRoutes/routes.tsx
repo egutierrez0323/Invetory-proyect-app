@@ -1,4 +1,5 @@
 import { Dashboard, Home, Users } from '@/pages'
+import { prototype } from 'events'
 import { RouteType } from '../model/route.model'
 
 export const Routes: RouteType = [
