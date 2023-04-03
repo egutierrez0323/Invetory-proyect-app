@@ -1,6 +1,6 @@
 
 import { useTranslation } from 'react-i18next'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { SidebarApp } from './components/layout/SidebarApp/SidebarApp'
 // import { Dashboard, Home } from './pages'
 import { RoutesGenerate, RoutesAPP } from './routes'
@@ -24,7 +24,12 @@ function App () {
 
         <Routes>
           <Route path='/' element={<SidebarApp routes={RoutesAPP} />}>
-            <RoutesGenerate routes={RoutesAPP} />
+            {
+              RoutesAPP.map((route) => {
+                const { path, element } = route
+                return <Route key={path} path={path} element={element} />
+              })
+            }
           </Route>
         </Routes>
         <h1>{t('title')}</h1>
