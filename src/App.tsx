@@ -1,8 +1,9 @@
 
 import { useTranslation } from 'react-i18next'
-import { BrowserRouter, Link, Route } from 'react-router-dom'
-import { Dashboard, Home } from './pages'
-import { RoutesGenerate, Routes } from './routes'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { SidebarApp } from './components/layout/SidebarApp/SidebarApp'
+// import { Dashboard, Home } from './pages'
+import { RoutesGenerate, RoutesAPP } from './routes'
 
 function App () {
   const [t, i18n] = useTranslation()
@@ -11,20 +12,21 @@ function App () {
     <BrowserRouter>
       <div className='App'>
         App pro 😎
-
+        {/*
         <nav>
           <ul>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/dashboard'>Dashboard</Link></li>
+            <li><Link to='/users'>Users</Link></li>
+
           </ul>
-        </nav>
+        </nav> */}
 
-        {/* <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/dashboard' element={<Dashboard />} />
-      </Routes> */}
-
-        <RoutesGenerate routes={Routes} />
+        <Routes>
+          <Route path='/' element={<SidebarApp routes={RoutesAPP} />}>
+            <RoutesGenerate routes={RoutesAPP} />
+          </Route>
+        </Routes>
         <h1>{t('title')}</h1>
         <button onClick={() => i18n.changeLanguage('en')}>change</button>
 

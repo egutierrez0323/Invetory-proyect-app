@@ -1,8 +1,7 @@
-import { Dashboard, Home, Users } from '@/pages'
-import { prototype } from 'events'
+import { Dashboard, Home, Users, NotFoundPage } from '@/pages'
 import { RouteType } from '../model/route.model'
 
-export const Routes: RouteType = [
+export const RoutesAPP: RouteType[] = [
   {
     path: '/',
     element: <Home />,
@@ -22,6 +21,14 @@ export const Routes: RouteType = [
     element: <Users />,
     sidebarProps: {
       displayText: 'Users'
+    }
+  },
+  {
+    path: '/*',
+    element: <NotFoundPage />,
+    exact: true,
+    sidebarProps: {
+      displayText: 'Not Found'
     }
   }
 ]

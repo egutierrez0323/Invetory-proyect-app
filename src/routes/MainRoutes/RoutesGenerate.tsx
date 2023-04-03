@@ -1,19 +1,14 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route  } from 'react-router-dom'
 import { RouteType } from '../model/route.model'
 import React from 'react'
 
 interface Props {
-  routes: RouteType[]
+  routes: RouteType
 }
 
-export const RoutesGenerate : React.FC<Props> = (props) => {
-  const { routes } = props
-  return (
-    <Routes>
-      {routes.map((route: RouteType) => {
-        return <Route key={route.path} path={route.path} element={route.element} />
-      })}
-    </Routes>
+export const RoutesGenerate = (props : Props) => {
+  const { path,element } = props.routes
+    
+  return <Route key={path} path={path} element={element} />
 
-  )
 }
